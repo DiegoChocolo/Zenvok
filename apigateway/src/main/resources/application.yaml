@@ -1,0 +1,99 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: apigateway
+  cloud:
+    gateway:
+      server:
+        webflux:
+          routes:
+
+            - id: ruta-direcciones
+              uri: lb://direccion
+              predicates:
+                - Path=/api/direcciones,/api/direcciones/**
+
+            - id: ruta-comunas
+              uri: lb://direccion
+              predicates:
+                - Path=/api/comunas,/api/comunas/**
+
+            - id: ruta-configuracion
+              uri: lb://configuracion
+              predicates:
+                - Path=/api/configuraciones,/api/configuraciones/**
+
+            - id: ruta-bodega-productos
+              uri: lb://Gest_Bode
+              predicates:
+              - Path=/api/productos_ubicaciones,/api/productos_ubicaciones/**
+
+            - id: ruta-bodega-pasillos
+              uri: lb://Gest_Bode
+              predicates:
+                - Path=/api/pasillos,/api/pasillos/**
+
+            - id: ruta-bodega-estructuras
+              uri: lb://Gest_Bode
+              predicates:
+                - Path=/api/bodega_estructuras,/api/bodega_estructuras/**
+
+            - id: ruta-bodega-estantes
+              uri: lb://Gest_Bode
+              predicates:
+                - Path=/api/estantes,/api/estantes/**
+
+            - id: ruta-usuarios
+              uri: lb://gestionusuario
+              predicates:
+                - Path=/api/usuarios,/api/usuarios/**
+
+            - id: ruta-tipos-usuarios
+              uri: lb://gestionusuario
+              predicates:
+                - Path=/api/tipos_usuarios,/api/tipos_usuarios/**
+
+            - id: ruta-ventas
+              uri: lb://Ventas
+              predicates:
+                - Path=/api/ventas,/api/ventas/**
+
+            - id: ruta-detalles
+              uri: lb://Ventas
+              predicates:
+                - Path=/api/detalles,/api/detalles/**
+
+            - id: ruta-envios
+              uri: lb://envios
+              predicates:
+                - Path=/api/envios,/api/envios/**
+
+            - id: ruta-estado
+              uri: lb://estado
+              predicates:
+                - Path=/api/estados,/api/estados/**
+
+            - id: ruta-producto
+              uri: lb://producto
+              predicates:
+                - Path=/api/productos,/api/productos/**
+
+            - id: ruta-categorias
+              uri: lb://producto
+              predicates:
+                - Path=/api/categorias,/api/categorias/**
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka-server:8761/eureka/
+  instance:
+    prefer-ip-address: true
+
+logging:
+  level:
+    '[org.springframework.cloud.gateway]': DEBUG

@@ -1,0 +1,150 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: mysql
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+    networks:
+      - zenvok-net
+
+  eureka-server:
+    build: ./eureka
+    container_name: eureka-server
+    ports:
+      - "8761:8761"
+    networks:
+      - zenvok-net
+
+  configuracion:
+    build: ./Configuracion
+    container_name: configuracion
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+    ports:
+      - "8088:8088"
+    depends_on:
+      - mysql
+    networks:
+      - zenvok-net
+
+  gest-bode:
+    build: ./Gest_Bode
+    container_name: gest-bode
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+    ports:
+      - "8085:8085"
+    depends_on:
+      - mysql
+      - producto
+    networks:
+      - zenvok-net
+
+  gestionusuario:
+    build: ./GestionUsuario
+    container_name: gestionusuario
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+    ports:
+      - "8081:8081"
+    depends_on:
+      - mysql
+    networks:
+      - zenvok-net
+
+  estado:
+    build: ./estado
+    container_name: estado
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+    ports:
+      - "8083:8083"
+    depends_on:
+      - mysql
+    networks:
+      - zenvok-net
+
+  producto:
+    build: ./producto
+    container_name: producto
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+    ports:
+      - "8084:8084"
+    depends_on:
+      - mysql
+      - estado
+    networks:
+      - zenvok-net
+
+  direccion:
+    build: ./direccion
+    container_name: direccion
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+    ports:
+      - "8082:8082"
+    depends_on:
+      - mysql
+      - eureka-server
+      - gestionusuario
+      - estado
+    networks:
+      - zenvok-net
+
+  ventas:
+    build: ./Ventas
+    container_name: ventas
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+    ports:
+      - "8086:8086"
+    depends_on:
+      - mysql
+      - eureka-server
+      - producto
+      - gestionusuario
+      - estado
+      - gest-bode
+    networks:
+      - zenvok-net
+
+  envios:
+    build: ./envios
+    container_name: envios
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+    ports:
+      - "8087:8087"
+    depends_on:
+      - mysql
+      - direccion
+      - ventas
+      - estado
+    networks:
+      - zenvok-net
+
+  apigateway:
+    build: ./apigateway
+    container_name: apigateway
+    ports:
+      - "8080:8080"
+    depends_on:
+      - eureka-server
+      - direccion
+      - ventas
+    networks:
+      - zenvok-net
+
+networks:
+  zenvok-net:
+    driver: bridge
+
+volumes:
+  mysql-data:

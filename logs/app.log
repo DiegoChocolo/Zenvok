@@ -1,0 +1,251 @@
+2026-06-21T21:11:53.601-04:00  INFO 14108 --- [direccion] [main] c.zenvok.direccion.DireccionApplication  : Starting DireccionApplication using Java 21.0.10 with PID 14108 (C:\Users\diefo\Desktop\Zenvok-main\direccion\target\classes started by diefo in C:\Users\diefo\Desktop\Zenvok-main)
+2026-06-21T21:11:53.611-04:00  INFO 14108 --- [direccion] [main] c.zenvok.direccion.DireccionApplication  : No active profile set, falling back to 1 default profile: "default"
+2026-06-21T21:11:56.961-04:00  INFO 14108 --- [direccion] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-21T21:11:57.438-04:00  INFO 14108 --- [direccion] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 425 ms. Found 2 JPA repository interfaces.
+2026-06-21T21:11:58.710-04:00  INFO 14108 --- [direccion] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=88df5deb-efe9-399b-a114-443f831a4951
+2026-06-21T21:12:00.040-04:00  INFO 14108 --- [direccion] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8082 (http)
+2026-06-21T21:12:00.095-04:00  INFO 14108 --- [direccion] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-21T21:12:00.096-04:00  INFO 14108 --- [direccion] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-06-21T21:12:00.317-04:00  INFO 14108 --- [direccion] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 6478 ms
+2026-06-21T21:12:00.878-04:00  INFO 14108 --- [direccion] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-21T21:12:01.164-04:00  INFO 14108 --- [direccion] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-06-21T21:12:02.266-04:00  INFO 14108 --- [direccion] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-21T21:12:02.349-04:00  INFO 14108 --- [direccion] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-21T21:12:04.306-04:00  WARN 14108 --- [direccion] [main] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 1049, SQLState: 42000
+2026-06-21T21:12:04.307-04:00  WARN 14108 --- [direccion] [main] org.hibernate.orm.jdbc.error             : Unknown database 'bd_direccion'
+2026-06-21T21:12:04.309-04:00  WARN 14108 --- [direccion] [main] org.hibernate.orm.jdbc                   : HHH100046: Could not obtain connection to query JDBC database metadata
+
+org.hibernate.exception.SQLGrammarException: Unable to obtain isolated JDBC connection [Unknown database 'bd_direccion'] [n/a]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:63) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:34) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:115) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:101) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:51) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:366) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironment(JdbcEnvironmentInitiator.java:143) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:120) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:80) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:133) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:260) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:235) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:212) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:251) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:203) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:172) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1392) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.populateSessionFactoryBuilder(EntityManagerFactoryBuilderImpl.java:1472) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1454) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:93) ~[spring-orm-7.0.7.jar:7.0.7]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:443) ~[spring-orm-7.0.7.jar:7.0.7]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:436) ~[spring-orm-7.0.7.jar:7.0.7]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:411) ~[spring-orm-7.0.7.jar:7.0.7]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:419) ~[spring-orm-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977) ~[spring-context-7.0.7.jar:7.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.7.jar:7.0.7]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.6.jar:4.0.6]
+	at com.zenvok.direccion.DireccionApplication.main(DireccionApplication.java:12) ~[classes/:na]
+Caused by: java.sql.SQLSyntaxErrorException: Unknown database 'bd_direccion'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:840) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:373) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:210) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:576) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:97) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111) ~[HikariCP-7.0.2.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DataSourceConnectionProvider.getConnection(DataSourceConnectionProvider.java:137) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:508) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:48) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	... 37 common frames omitted
+
+2026-06-21T21:12:04.352-04:00  WARN 14108 --- [direccion] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-21T21:12:04.372-04:00  INFO 14108 --- [direccion] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [undefined/unknown]
+	Database driver: undefined/unknown
+	Database dialect: MySQLDialect
+	Database version: 8.0
+	Default catalog/schema: unknown/unknown
+	Autocommit mode: undefined/unknown
+	Isolation level: NONE [default NONE]
+	JDBC fetch size: undefined/unknown
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-21T21:12:06.033-04:00  INFO 14108 --- [direccion] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-21T21:12:06.087-04:00  INFO 14108 --- [direccion] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-21T21:12:07.103-04:00  WARN 14108 --- [direccion] [main] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 1049, SQLState: 42000
+2026-06-21T21:12:07.104-04:00  WARN 14108 --- [direccion] [main] org.hibernate.orm.jdbc.error             : Unknown database 'bd_direccion'
+2026-06-21T21:12:07.109-04:00 ERROR 14108 --- [direccion] [main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Unable to build Hibernate SessionFactory  [persistence unit: default] ; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution [Unknown database 'bd_direccion'] [n/a]
+2026-06-21T21:12:07.111-04:00  WARN 14108 --- [direccion] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Unable to build Hibernate SessionFactory  [persistence unit: default] ; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution [Unknown database 'bd_direccion'] [n/a]
+2026-06-21T21:12:07.119-04:00  INFO 14108 --- [direccion] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-06-21T21:12:07.138-04:00  INFO 14108 --- [direccion] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-06-21T21:12:07.168-04:00 ERROR 14108 --- [direccion] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Unable to build Hibernate SessionFactory  [persistence unit: default] ; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution [Unknown database 'bd_direccion'] [n/a]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1817) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977) ~[spring-context-7.0.7.jar:7.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.7.jar:7.0.7]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.6.jar:4.0.6]
+	at com.zenvok.direccion.DireccionApplication.main(DireccionApplication.java:12) ~[classes/:na]
+Caused by: jakarta.persistence.PersistenceException: Unable to build Hibernate SessionFactory  [persistence unit: default] ; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution [Unknown database 'bd_direccion'] [n/a]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:448) ~[spring-orm-7.0.7.jar:7.0.7]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:411) ~[spring-orm-7.0.7.jar:7.0.7]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:419) ~[spring-orm-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813) ~[spring-beans-7.0.7.jar:7.0.7]
+	... 15 common frames omitted
+Caused by: org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution [Unknown database 'bd_direccion'] [n/a]
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:64) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:34) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:115) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:101) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:71) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:37) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:61) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcDatabaseMetaData(ImprovedExtractionContextImpl.java:68) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.getJdbcDatabaseMetaData(InformationExtractorJdbcDatabaseMetaDataImpl.java:38) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processTableResultSet(InformationExtractorJdbcDatabaseMetaDataImpl.java:76) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.tool.schema.extract.internal.AbstractInformationExtractorImpl.getTables(AbstractInformationExtractorImpl.java:496) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.getTablesInformation(DatabaseInformationImpl.java:124) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:72) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:220) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:96) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:269) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$1(SchemaManagementToolCoordinator.java:101) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429) ~[na:na]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:100) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:35) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:33) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:323) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.internal.SessionFactoryRegistry.instantiateSessionFactory(SessionFactoryRegistry.java:64) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:437) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1456) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:93) ~[spring-orm-7.0.7.jar:7.0.7]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:443) ~[spring-orm-7.0.7.jar:7.0.7]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:436) ~[spring-orm-7.0.7.jar:7.0.7]
+	... 19 common frames omitted
+Caused by: java.sql.SQLSyntaxErrorException: Unknown database 'bd_direccion'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:840) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:373) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:210) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:576) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:97) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111) ~[HikariCP-7.0.2.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DataSourceConnectionProvider.getConnection(DataSourceConnectionProvider.java:137) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:508) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:44) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	... 42 common frames omitted
+
+2026-06-21T21:14:55.610-04:00  INFO 21376 --- [direccion] [main] c.zenvok.direccion.DireccionApplication  : Starting DireccionApplication using Java 21.0.10 with PID 21376 (C:\Users\diefo\Desktop\Zenvok-main\direccion\target\classes started by diefo in C:\Users\diefo\Desktop\Zenvok-main)
+2026-06-21T21:14:55.624-04:00  INFO 21376 --- [direccion] [main] c.zenvok.direccion.DireccionApplication  : No active profile set, falling back to 1 default profile: "default"
+2026-06-21T21:14:58.251-04:00  INFO 21376 --- [direccion] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-21T21:14:58.484-04:00  INFO 21376 --- [direccion] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 207 ms. Found 2 JPA repository interfaces.
+2026-06-21T21:14:59.111-04:00  INFO 21376 --- [direccion] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=88df5deb-efe9-399b-a114-443f831a4951
+2026-06-21T21:15:00.583-04:00  INFO 21376 --- [direccion] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8082 (http)
+2026-06-21T21:15:00.634-04:00  INFO 21376 --- [direccion] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-21T21:15:00.634-04:00  INFO 21376 --- [direccion] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-06-21T21:15:00.803-04:00  INFO 21376 --- [direccion] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 4918 ms
+2026-06-21T21:15:01.297-04:00  INFO 21376 --- [direccion] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-21T21:15:01.558-04:00  INFO 21376 --- [direccion] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-06-21T21:15:02.737-04:00  INFO 21376 --- [direccion] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-21T21:15:02.798-04:00  INFO 21376 --- [direccion] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-21T21:15:03.048-04:00  INFO 21376 --- [direccion] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@38445703
+2026-06-21T21:15:03.051-04:00  INFO 21376 --- [direccion] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-21T21:15:03.118-04:00  WARN 21376 --- [direccion] [main] org.hibernate.orm.core                   : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-06-21T21:15:03.124-04:00  WARN 21376 --- [direccion] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-21T21:15:03.165-04:00  INFO 21376 --- [direccion] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/bd_direccion?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: bd_direccion/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-21T21:15:04.768-04:00  INFO 21376 --- [direccion] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-21T21:15:05.654-04:00  INFO 21376 --- [direccion] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-21T21:15:05.890-04:00  INFO 21376 --- [direccion] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-21T21:15:06.781-04:00  WARN 21376 --- [direccion] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-21T21:15:08.652-04:00  INFO 21376 --- [direccion] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+2026-06-21T21:15:08.734-04:00  WARN 21376 --- [direccion] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-06-21T21:15:08.813-04:00  INFO 21376 --- [direccion] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-06-21T21:15:08.883-04:00  INFO 21376 --- [direccion] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-06-21T21:15:08.895-04:00  INFO 21376 --- [direccion] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-21T21:15:08.924-04:00  INFO 21376 --- [direccion] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-06-21T21:15:08.925-04:00  INFO 21376 --- [direccion] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-06-21T21:15:08.926-04:00  INFO 21376 --- [direccion] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-06-21T21:15:08.926-04:00  INFO 21376 --- [direccion] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-06-21T21:15:08.927-04:00  INFO 21376 --- [direccion] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-06-21T21:15:08.928-04:00  INFO 21376 --- [direccion] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-06-21T21:15:08.928-04:00  INFO 21376 --- [direccion] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-06-21T21:15:10.934-04:00  INFO 21376 --- [direccion] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-06-21T21:15:10.934-04:00  INFO 21376 --- [direccion] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-06-21T21:15:10.934-04:00  INFO 21376 --- [direccion] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-06-21T21:15:10.947-04:00  INFO 21376 --- [direccion] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1782090910944 with initial instances count: 0
+2026-06-21T21:15:10.957-04:00  INFO 21376 --- [direccion] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application DIRECCION with eureka with status UP
+2026-06-21T21:15:10.960-04:00  INFO 21376 --- [direccion] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1782090910960, current=UP, previous=STARTING]
+2026-06-21T21:15:10.961-04:00  INFO 21376 --- [direccion] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DIRECCION/direccion:8082: registering service...
+2026-06-21T21:15:11.010-04:00  INFO 21376 --- [direccion] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8082 (http) with context path '/'
+2026-06-21T21:15:11.012-04:00  INFO 21376 --- [direccion] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8082
+2026-06-21T21:15:11.051-04:00  INFO 21376 --- [direccion] [main] c.zenvok.direccion.DireccionApplication  : Started DireccionApplication in 16.59 seconds (process running for 17.696)
+2026-06-21T21:15:11.487-04:00  INFO 21376 --- [direccion] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DIRECCION/direccion:8082 - registration status: 204
+2026-06-21T21:15:12.074-04:00  INFO 21376 --- [direccion] [main] c.z.direccion.config.DataInitializer     : Cargando comunas...
+2026-06-21T21:15:12.168-04:00  INFO 21376 --- [direccion] [main] c.z.direccion.config.DataInitializer     : Comunas cargadas exitosamente
+2026-06-21T21:15:12.169-04:00  INFO 21376 --- [direccion] [main] c.z.direccion.config.DataInitializer     : Cargando direcciones...
+2026-06-21T21:15:12.196-04:00  INFO 21376 --- [direccion] [main] c.z.direccion.config.DataInitializer     : Direcciones cargadas exitosamente
+2026-06-21T21:15:12.198-04:00  WARN 21376 --- [direccion] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-06-21T21:15:12.199-04:00  WARN 21376 --- [direccion] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-06-21T21:15:40.947-04:00  INFO 21376 --- [direccion] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-06-21T21:15:40.949-04:00  INFO 21376 --- [direccion] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-06-21T21:15:40.949-04:00  INFO 21376 --- [direccion] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-06-21T21:15:40.949-04:00  INFO 21376 --- [direccion] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-06-21T21:15:40.949-04:00  INFO 21376 --- [direccion] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-06-21T21:15:40.951-04:00  INFO 21376 --- [direccion] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2026-06-21T21:15:40.951-04:00  INFO 21376 --- [direccion] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-06-21T21:15:41.009-04:00  INFO 21376 --- [direccion] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-06-21T21:20:08.963-04:00  INFO 21376 --- [direccion] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-21T21:25:09.011-04:00  INFO 21376 --- [direccion] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-21T21:30:09.048-04:00  INFO 21376 --- [direccion] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-21T21:35:09.306-04:00  INFO 21376 --- [direccion] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
